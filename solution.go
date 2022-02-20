@@ -23,12 +23,14 @@ type SidesAmount int
 // CalcSquare(10.0, SidesCircle)
 
 func CalcSquare(sideLen float64, sidesNum SidesAmount) float64 {
+	var answer float64
 	switch sidesNum {
 	case SidesCircle:
-		return sideLen * sideLen * math.Pi
+		answer = sideLen * sideLen * math.Pi
 	case SidesTriangle:
-		return (sideLen * sideLen * math.Sqrt(3)) / 4
+		answer = (sideLen * sideLen * math.Sqrt(3)) / 4
 	case SidesSquare:
-		return sideLen * sideLen
+		answer = sideLen * sideLen
 	}
+	return answer
 }
